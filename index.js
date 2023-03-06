@@ -54,8 +54,9 @@ app.post(
     allValidators.registration,
     userHandlers.update
 );
-app.get("/user/name/:username", userHandlers.getByName);
 app.get("/user/get-data", checkAuth, userHandlers.getData);
+
+app.get("/users/:username", userHandlers.getByName);
 
 app.post(
     "/posts/create",

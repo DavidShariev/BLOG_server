@@ -12,7 +12,7 @@ const checkAuth = (req, res, next) => {
         } catch (err) {
             console.error(err.message);
             return res.status(403).json({
-                message: "Ошибка получения данных ",
+                message: "Не удалось авторизоваться",
                 status: 403,
             });
         }
